@@ -1,31 +1,40 @@
+debugger
 // validate func
 function validateData(parameter) {
-  if (!Boolean(parameter.trim())) {
-    alert("plz input something");
-    throw new Error("plz input something");
-    return;
+  if (!Number(parameter)) {
+    if (parameter.lenght > 0) {
+      alert("plz put number not a string");
+      throw new Error("plz put number not a string");
+    } else {
+      alert("plz input something");
+      throw new Error("plz input something");
+    }
+    // alert("plz input something");
+    // throw new Error("plz input something");
+    // return;
   }
-  if (!Number(parameter.trim())) {
-    alert("plz put number not a string");
-    throw new Error("plz put number not a string");
-  }
+  // if (!Number(parameter)) {
+  //   alert("plz put number not a string");
+  //   throw new Error("plz put number not a string");
+  // }
 
-  return Number(parameter);
+  // return Number(parameter);
 }
-
 // client range
-const clientRangeMin = validateData(prompt("number range min"));
-const clientRangeMax = validateData(prompt("number range max"));
+const clientRangeMin = validateData(+prompt("number range min"));
+const clientRangeMax = validateData(+prompt("number range max"));
+
 // random number
-const randomNumber = Math.floor(
-  Math.random() * (clientRangeMin, clientRangeMax)
+const randomNumber = Math.round(
+  Math.random() * (clientRangeMax - clientRangeMin) + clientRangeMin
 );
+
 // client chance
 let clientChance = 5;
 // loop to guess number count down until chance become 0
 while (clientChance > 0) {
   // client guess
-  const clientGuess = validateData(window.prompt("your guess"));
+  const clientGuess = window.prompt("your guess");
 
   // check the answer
 
@@ -35,6 +44,7 @@ while (clientChance > 0) {
     );
     break;
   }
+  console.log(clientGuess);
   // check if answer was bigger
   if (clientGuess > randomNumber) {
     window.alert("your answer is bigger than number");
