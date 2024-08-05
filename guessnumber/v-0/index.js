@@ -2,14 +2,14 @@
 function validateData(parameter) {
   if (!Boolean(parameter.trim())) {
     alert("plz input something");
+    throw new Error("plz input something");
     return;
   }
-  if (Number(parameter) === NaN) {
-    console.log("plz type number");
-  } else {
+  if (!Number(parameter.trim())) {
     alert("plz put number not a string");
-    return;
+    throw new Error("plz put number not a string");
   }
+
   return Number(parameter);
 }
 
@@ -25,7 +25,7 @@ let clientChance = 5;
 // loop to guess number count down until chance become 0
 while (clientChance > 0) {
   // client guess
-  const clientGuess = prompt("you'r guess").trim();
+  const clientGuess = validateData(window.prompt("your guess"));
 
   // check the answer
 
