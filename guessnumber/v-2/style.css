@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pixelify+Sans:wght@400..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+body {
+  font-family: "Pixelify Sans", sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: #2b2b2b;
+}
+.topHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  div {
+    padding: 18px 45px;
+    color: black;
+    background-color: #fff;
+    font-size: 1.5rem;
+    &:hover {
+      background-color: #ffffffd7;
+      cursor: pointer;
+      transition-property: background-color;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+  p {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+}
+.mainTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+}
+.answerBox {
+  width: 100%;
+  margin: 5rem 0px;
+  height: 10px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .answer {
+    background-color: white;
+    display: inline-block;
+    padding: 15px 60px;
+    font-size: 3.5rem;
+  }
+}
+.bottomBox {
+  width: 100%;
+  height: 40%;
+  padding: 0px 40px;
+  display: flex;
+  .answerInput {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    input {
+      background-color: transparent;
+      border-style: solid;
+      width: 200px;
+      font-family: "Pixelify sans";
+      border-color: white;
+      font-size: 2.5rem;
+      height: 100px;
+      text-align: center;
+    }
+    button {
+      background-color: white;
+      font-size: 1.5rem;
+      border: none;
+      font-family: "Pixelify sans";
+      padding: 1rem 2.2rem;
+      margin-top: 15px;
+    }
+  }
+  .guessContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    h2 {
+      padding: 15px 0;
+    }
+    ul li {
+      margin: 10px 0px;
+    }
+  }
+}

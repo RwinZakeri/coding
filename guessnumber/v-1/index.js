@@ -40,9 +40,3 @@ for (clientChance; clientChance > 0; ) {
     clientChance--;
   }
 }
-
-// check all prompt
-// const clientData = prompt("");
-// console.log(validate(clientData));
-
-// || parameter.length > 0 || parameter.trim()
