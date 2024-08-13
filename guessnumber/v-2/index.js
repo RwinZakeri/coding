@@ -1,7 +1,7 @@
 "use strict";
 let randumNubmer = Math.trunc(Math.random() * 20 + 1);
 console.log(randumNubmer);
-let clientChance = 20;
+let clientChance = 5;
 let scores = "";
 let hightScore = "";
 document.querySelector("ul").children[0].textContent = "score: " + clientChance;
